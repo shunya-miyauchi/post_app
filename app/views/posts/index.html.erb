@@ -9,8 +9,10 @@
   <body>
     <header>
       <h1>つぶやき！</h1>
+      <%= link_to "新規投稿", new_post_path %>
     </header>
     <main>
+      <%= notice %>
       <table>
           <% @posts.reverse_each do |post| %>
             <tr><th><%= l post.created_at %></th></tr>

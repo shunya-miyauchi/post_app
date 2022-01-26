@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSTS</title>
+  </head>
+  <body>
+    <header>
+      <h1>つぶやき！</h1>
+    </header>
+    <main>
+      <table>
+        <tr><th><%= @post.content %></th></tr>
+        <tr>
+          <th>
+            <%= link_to "編集",  edit_post_path(@post.id) %>　
+            <%= link_to "削除",  post_path(@post.id), method: :delete %>　
+            <%= link_to "戻る", posts_path %>
+          </th>
+        </tr>
+      </table>
+    </main>
+    <footer>
+      <p>©︎miyauchi</p>
+    </footer>
+  </body>
+</html>
