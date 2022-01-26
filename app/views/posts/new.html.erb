@@ -1,0 +1,7 @@
+<%= form_with(model:@post, local:true) do |form| %>
+  <div>
+    <%= form.label :いまどうしてる？ %><br>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit "つぶやく" %>
+<% end %>
