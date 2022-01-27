@@ -42,13 +42,14 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to posts_path, notice:"UPDATE！"
     else
-      render :new
+      render :edit
     end
   end
 
   # 確認
   def confirm
     @post = Post.new(post_params)
+    render :new if @post.invalid?
   end
 
   private
