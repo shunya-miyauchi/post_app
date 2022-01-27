@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>POSTS</title>
+    </head>
+    <body>
+        <header>
+            <h1>つぶやき！</h1>
+        </header>
+        <main>
+            <%= form_with(model:@post, local:true) do |form| %>
+                <div>
+                    <%= form.label :編集中！ %><br>
+                    <%= form.text_field :content %>
+                </div>
+                <%= form.submit "つぶやく" %>
+            <% end %> 
+            <%= link_to "戻る", posts_path %>
+        </main>
+        <footer>
+            <p>©︎miyauchi</p>
+        </footer>
+    </body>
+</html>
