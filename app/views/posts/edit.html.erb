@@ -18,8 +18,10 @@
                     <%= form.text_field :content %>
                 </div>
                 <%= form.submit "つぶやく" %>
+                <%= link_to posts_path do %>
+                  <button>戻る</button>
+                <% end %>
             <% end %> 
-            <%= link_to "戻る", posts_path %>
         </main>
         <footer>
             <p>©︎miyauchi</p>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>POSTS</title>
+  </head>
+  <body>
+      <header>
+          <h1>つぶやき！</h1>
+      </header>
+      <main>
+        <%= form_with(model:@post, local:true) do |form| %>
+          <h2>以下の内容でよろしいですか？</h2>
+           <%= form.hidden_field :content %>
+          <div>
+            <%= @post.content %>
+          </div>
+          <%= form.submit "つぶやく" %>
+          <%= form.submit "戻る" , name:"back" %>
+        <% end %> 
+      </main>
+      <footer>
+        <p>©︎miyauchi</p>
+      </footer>
+  </body>
+</html>

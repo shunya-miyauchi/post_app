@@ -8,10 +8,14 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to posts_path , notice:"NEW！"
-    else
+    if params[:back]
       render :new
+    else
+      if @post.save
+        redirect_to posts_path , notice:"NEW！"
+      else
+        render :new
+      end
     end
   end
 
@@ -44,7 +48,7 @@ class PostsController < ApplicationController
 
   # 確認
   def confirm
-    
+    @post = Post.new(post_params)
   end
 
   private
