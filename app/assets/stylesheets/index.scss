@@ -1,0 +1,47 @@
+.post_index {
+  margin: auto;
+  width: 500px;
+}
+
+tr {
+  text-align: center;
+}
+
+.first_td {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.second_td {
+  font-size: 20px;
+  padding: 5px 0px 10px 0px;
+}
+
+.last_td {
+  border-bottom: rgba(0, 0, 0, 0.452) 0.1px solid; 
+  font-size: 5px;
+  text-decoration: none;
+  padding: 0px 0px 10px 0px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.edit_button {
+ margin: 0px 10px;
+}
+
+.last_td a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.404);
+  padding: 3px;
+  border-radius: 30px;
+}
+
+.notice {
+  color: red;
+  text-align: center;
+  margin: 10px 0px 0px 0px;
+}

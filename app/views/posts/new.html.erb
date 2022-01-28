@@ -1,13 +1,14 @@
-<main>
+<%= stylesheet_link_tag 'new' %>
+<main class="main">
   <%= render "error_message" %>
   <%= form_with(model:@post, local:true, url:confirm_posts_path) do |form| %>
-    <div>
-      <%= form.label :いまどうしてる？ %><br>
-      <%= form.text_field :content %>
+    <div class="label_body"><%= form.label :なにつぶやくの？, class:"label" %></div>
+    <div class="text_body"><%= form.text_area :content, class:"text", maxlength:140 %></div>
+    <div class="buttons" >
+      <%= form.submit "つぶやく", :class=>"post_button" %>
+      <%= link_to posts_path do %>
+        <button class="back_button">もどる</button>
+      <% end %>
     </div>
-    <%= form.submit "つぶやく" %>
-    <%= link_to posts_path do %>
-      <button>戻る</button>
-    <% end %>
   <% end %> 
 </main>

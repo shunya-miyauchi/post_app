@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PostApp</title>
+    <title>ひとりごと</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,16 +9,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
-      <h1>つぶやき！</h1>
+  <body class="body">
+    <header class="header" >
+      <div class="app_title">ひとりごと</div>
+      <div class="new">
       <% if current_page?(posts_path) %>
-        <%= link_to "新規投稿", new_post_path %>
+        <%= link_to "つぶやく", new_post_path, class:"new_button" %>
       <% end %>
+      </div>
     </header>
     <%= yield %>
-    <footer>
-      <p>©︎miyauchi</p>
+    <footer class="footer">
+      <p class="footer_name">©︎miyauchi</p>
     </footer>
   </body>
 </html>

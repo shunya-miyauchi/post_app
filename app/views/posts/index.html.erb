@@ -1,15 +1,16 @@
-<main>
-  <%= notice %>
-  <table>
+<%= stylesheet_link_tag 'index' %>
+<main class="main" >
+  <p class="notice" ><%= notice %></p>
+  <table class="post_index">
       <% @posts.reverse_each do |post| %>
-        <tr><th><%= l post.created_at %></th></tr>
-        <tr><th><%= post.content %></th></tr>
+        <tr><td class="first_td" ><%= l post.created_at %></td></tr>
+        <tr><td class="second_td" ><%= post.content %></td></tr>
         <tr>
-          <th>
-            <%= link_to "詳細",  post_path(post.id) %>　
-            <%= link_to "編集",  edit_post_path(post.id) %>　
-            <%= link_to "削除",  post_path(post.id), method: :delete %>
-          </th>
+          <td class="last_td" >
+            <%= link_to "しょうさい",  post_path(post.id) %>
+            <%= link_to "へんしゅう",  edit_post_path(post.id), class:"edit_button" %>
+            <%= link_to "さくじょ",  post_path(post.id), method: :delete %>
+          </td>
         </tr>
       <% end %>
   </table>

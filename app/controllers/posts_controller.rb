@@ -12,7 +12,7 @@ class PostsController < ApplicationController
       render :new
     else
       if @post.save
-        redirect_to posts_path , notice:"NEW！"
+        redirect_to posts_path , notice:"まーたつぶやいてる"
       else
         render :new
       end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   # 削除
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to posts_path , notice:"消すならつぶやくなよ"
   end
 
   # 詳細
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to posts_path, notice:"UPDATE！"
+      redirect_to posts_path, notice:"へんしゅうしたよー"
     else
       render :edit
     end

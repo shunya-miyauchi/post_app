@@ -1,12 +1,14 @@
-<main>
-  <table>
-    <tr><th><%= @post.content %></th></tr>
+<%= stylesheet_link_tag 'show' %>
+<main class="main">
+  <table class="post">
+    <tr><td class="first_td"><%= l @post.created_at %></td></tr>
+    <tr><td class="second_td"><%= @post.content %></td></tr>
     <tr>
-      <th>
-        <%= link_to "編集",  edit_post_path(@post.id) %>　
-        <%= link_to "削除",  post_path(@post.id), method: :delete %>　
-        <%= link_to "戻る", posts_path %>
-      </th>
+      <td class="last_td" >
+        <%= link_to "へんしゅう",  edit_post_path(@post.id) %>　
+        <%= link_to "さくじょ",  post_path(@post.id), method: :delete %>　
+        <%= link_to "もどる", posts_path %>
+      </td>
     </tr>
   </table>
 </main>

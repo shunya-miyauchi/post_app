@@ -1,0 +1,44 @@
+.main {
+  text-align: center;
+}
+
+.label {
+  font-size: 25px;
+}
+
+.label_body {
+  margin: 20px 0px;
+}
+
+.text {
+  width: 50%;
+  height: 300px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.text_body {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+.post_button {
+  font-size: 15px;
+  background-color: rgba(255, 0, 0, 0.534);
+  border-style: none;
+  border-radius: 20px;
+  padding: 6px;
+  color: white;
+}
+
+.back_button {
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.404);
+  border-style: none;
+  border-radius: 30px;
+  color: white;
+  padding: 5px;
+}

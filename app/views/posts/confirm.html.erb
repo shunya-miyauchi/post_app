@@ -1,11 +1,14 @@
-<main>
+<%= stylesheet_link_tag 'new' %>
+<main class="main">
   <%= form_with(model:@post, local:true) do |form| %>
-    <h2>以下の内容でよろしいですか？</h2>
+    <p class="label_body">以下の内容でよろしいですか？</p>
       <%= form.hidden_field :content %>
-    <div>
+    <div class="text_body">
       <%= @post.content %>
     </div>
-    <%= form.submit "つぶやく" %>
-    <%= form.submit "戻る" , name:"back" %>
+    <div class="buttons" >
+      <%= form.submit "つぶやく", :class=>"post_button"%>
+      <%= form.submit "戻る" , name:"back", :class=>"back_button" %>
+    </div>
   <% end %> 
 </main>

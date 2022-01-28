@@ -1,0 +1,31 @@
+.post {
+  margin: auto;
+}
+
+td {
+  text-align: center;
+}
+
+.first_td {
+  font-size: 12px;
+  padding: 20px 0px 0px 0px;
+}
+
+.second_td {
+  font-size: 20px;
+  padding: 10px 0px 10px 0px;
+}
+
+.last_td {
+  font-size: 5px;
+  text-decoration: none;
+  padding: 10px 0px 10px 0px;
+}
+
+.last_td a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.404);
+  padding: 3px;
+  border-radius: 30px;
+}
